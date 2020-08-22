@@ -1,9 +1,9 @@
 package com.kwd.builder;
 
 public class Director {
-	Builder builder;
+	CarBuilder builder;
 
-	public Director(Builder builder) {
+	public Director(CarBuilder builder) {
 		this.builder = builder;
 	}
 	

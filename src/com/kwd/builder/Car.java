@@ -34,7 +34,7 @@ public class Car implements CarPlan {
 
 	@Override
 	public String toString() {
-		return "Car [doors=" + doors + ", roof=" + roof + ", wheels=" + wheels + ", windows=" + windows + ", engine="
-				+ engine + "]";
+		return "Car [doors=" + this.doors + ", roof=" + this.roof + ", wheels=" + this.wheels + ", windows="
+				+ this.windows + ", engine=" + this.engine + "]";
 	}
 }

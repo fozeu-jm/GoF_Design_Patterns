@@ -1,6 +1,6 @@
 package com.kwd.builder;
 
-public interface Builder {
+public interface CarBuilder {
 	public void buildRoof();
 	public void buildWheels();
 	public void buildWindows();

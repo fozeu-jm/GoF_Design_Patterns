@@ -1,15 +1,14 @@
 package com.kwd.builder;
 
-public class FerrariCarBuilder implements Builder {
-	Car car;
+public class FerrariCarBuilder implements CarBuilder {
+	Car car = new Car();
 
 	public FerrariCarBuilder() {
-		this.car = new Car();
 	}
 	
 	@Override
 	public void buildRoof() {
-		this.car.setDoors("Retractable roof");
+		this.car.setRoof("Retractable roof");
 	}
 
 	@Override
@@ -19,7 +18,7 @@ public class FerrariCarBuilder implements Builder {
 
 	@Override
 	public void buildWindows() {
-		this.car.setWheels("Tinted windows");
+		this.car.setWindows("Tinted windows");
 	}
 
 	@Override
