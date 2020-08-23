@@ -8,12 +8,18 @@ import com.kwd.creational.builder.Director;
 import com.kwd.creational.builder.FerrariCarBuilder;
 import com.kwd.creational.factory.Point;
 import com.kwd.creational.prototype.Student;
+import com.kwd.creational.singleton.Singleton;
 
 public class Main {
 
 	public static void main(String[] args) {
 		
-		Main.builderPattern();
+		Singleton single = Singleton.getInstance();
+		Singleton single2 = Singleton.getInstance();
+		
+		single.setValue(15);
+		single2.setValue(856);
+		System.out.println(single.getValue() + " | " + single2.getValue());
 
 	}
 
