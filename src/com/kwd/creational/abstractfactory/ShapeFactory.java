@@ -1,4 +1,4 @@
-package com.kwd.abstractfactory;
+package com.kwd.creational.abstractfactory;
 
 public class ShapeFactory extends AbstractFactory {
 

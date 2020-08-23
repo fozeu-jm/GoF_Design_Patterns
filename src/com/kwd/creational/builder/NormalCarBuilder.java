@@ -1,4 +1,4 @@
-package com.kwd.builder;
+package com.kwd.creational.builder;
 
 public class NormalCarBuilder implements CarBuilder {
 	Car car= new Car();

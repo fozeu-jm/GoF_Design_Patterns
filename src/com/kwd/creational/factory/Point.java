@@ -1,4 +1,4 @@
-package com.kwd.factory;
+package com.kwd.creational.factory;
 
 public class Point {
 	@SuppressWarnings("unused")

@@ -1,4 +1,4 @@
-package com.kwd.abstractfactory;
+package com.kwd.creational.abstractfactory;
 
 public class FactoryProducer {
 	public static AbstractFactory getFactory(boolean rounded) {

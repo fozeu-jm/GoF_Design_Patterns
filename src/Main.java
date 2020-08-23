@@ -1,22 +1,20 @@
-import com.kwd.abstractfactory.AbstractFactory;
-import com.kwd.abstractfactory.FactoryProducer;
-import com.kwd.abstractfactory.Shape;
-import com.kwd.builder.Car;
-import com.kwd.builder.Director;
-import com.kwd.builder.FerrariCarBuilder;
-import com.kwd.factory.Point;
+import org.apache.commons.lang3.SerializationUtils;
+
+import com.kwd.creational.abstractfactory.AbstractFactory;
+import com.kwd.creational.abstractfactory.FactoryProducer;
+import com.kwd.creational.abstractfactory.Shape;
+import com.kwd.creational.builder.Car;
+import com.kwd.creational.builder.Director;
+import com.kwd.creational.builder.FerrariCarBuilder;
+import com.kwd.creational.factory.Point;
+import com.kwd.creational.prototype.Student;
 
 public class Main {
 
 	public static void main(String[] args) {
-		// builder design pattern demo
-		// Main.builderPattern();
+		
+		Main.builderPattern();
 
-		// factory method design pattern demo
-		// Main.factoryMethod();
-
-		// Abstract factory design pattern demo
-		Main.AbstractFactoryPattern();
 	}
 
 	public static void builderPattern() {
@@ -58,6 +56,14 @@ public class Main {
 		Shape shape4 = shapeFactory1.getShape("SQUARE");
 		// call draw method of Shape Square
 		shape4.draw();
+	}
+
+	public static void PrototypePattern() {
+		Student std = new Student("John", "Mayers");
+		Student std2 = SerializationUtils.roundtrip(std);
+		std2.setFirstName("Evelyne");
+		System.out.println(std2);
+		System.out.println(std);
 	}
 
 }

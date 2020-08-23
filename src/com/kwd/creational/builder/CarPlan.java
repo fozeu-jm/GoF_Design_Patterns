@@ -1,4 +1,4 @@
-package com.kwd.builder;
+package com.kwd.creational.builder;
 
 public interface CarPlan {
 	public void setRoof(String roof);
