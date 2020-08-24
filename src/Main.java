@@ -9,17 +9,13 @@ import com.kwd.creational.builder.FerrariCarBuilder;
 import com.kwd.creational.factory.Point;
 import com.kwd.creational.prototype.Student;
 import com.kwd.creational.singleton.Singleton;
+import com.kwd.structural.adapter.RoundHole;
+import com.kwd.structural.adapter.SquaredPegsAdapter;
+import com.kwd.structural.adapter.UsaPlug;
 
 public class Main {
 
 	public static void main(String[] args) {
-		
-		Singleton single = Singleton.getInstance();
-		Singleton single2 = Singleton.getInstance();
-		
-		single.setValue(15);
-		single2.setValue(856);
-		System.out.println(single.getValue() + " | " + single2.getValue());
 
 	}
 
@@ -70,6 +66,24 @@ public class Main {
 		std2.setFirstName("Evelyne");
 		System.out.println(std2);
 		System.out.println(std);
+	}
+
+	public static void SingletonPattern() {
+		Singleton single = Singleton.getInstance();
+		Singleton single2 = Singleton.getInstance();
+
+		single.setValue(15);
+		single2.setValue(856);
+		System.out.println(single.getValue() + " | " + single2.getValue());
+	}
+
+	public static void AdapterPatter() {
+		RoundHole hole = new RoundHole(5);
+		UsaPlug plug = new UsaPlug(4);
+
+		// UsaPlug is a squared peg so it can't fit in round hole
+		SquaredPegsAdapter adapter = new SquaredPegsAdapter(plug);
+		System.out.println(hole.fits(adapter) ? "Fits perfectly" : "Does not fit");
 	}
 
 }
