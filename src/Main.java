@@ -15,11 +15,14 @@ import com.kwd.structural.adapter.UsaPlug;
 import com.kwd.structural.bridge.Tv;
 import com.kwd.structural.bridge.UniversalRemote;
 import com.kwd.structural.composite.Employee;
+import com.kwd.structural.proxy.Drivable;
+import com.kwd.structural.proxy.Driver;
+import com.kwd.structural.proxy.VehicleProxy;
 
 public class Main {
 
 	public static void main(String[] args) {
-		
+
 	}
 
 	public static void builderPattern() {
@@ -120,6 +123,11 @@ public class Main {
 		headMarketing.add(clerk2);
 
 		System.out.println(CEO);
+	}
+
+	public static void proxyPatter() {
+		Drivable car = new VehicleProxy(new Driver(12));
+		car.drive();
 	}
 
 }
