@@ -12,6 +12,8 @@ import com.kwd.creational.singleton.Singleton;
 import com.kwd.structural.adapter.RoundHole;
 import com.kwd.structural.adapter.SquaredPegsAdapter;
 import com.kwd.structural.adapter.UsaPlug;
+import com.kwd.structural.bridge.Tv;
+import com.kwd.structural.bridge.UniversalRemote;
 
 public class Main {
 
@@ -84,6 +86,14 @@ public class Main {
 		// UsaPlug is a squared peg so it can't fit in round hole
 		SquaredPegsAdapter adapter = new SquaredPegsAdapter(plug);
 		System.out.println(hole.fits(adapter) ? "Fits perfectly" : "Does not fit");
+	}
+
+	public static void BridgePattern() {
+		Tv tv = new Tv();
+		UniversalRemote remote = new UniversalRemote(tv);
+		remote.power();
+		remote.volumeUp();
+		tv.printStatus();
 	}
 
 }
