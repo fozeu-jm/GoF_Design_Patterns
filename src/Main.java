@@ -20,6 +20,8 @@ import com.kwd.structural.command.BankAccount;
 import com.kwd.structural.command.BankAccountCommand;
 import com.kwd.structural.command.BankAccountCommand.Action;
 import com.kwd.structural.composite.Employee;
+import com.kwd.structural.mediator.Chatroom;
+import com.kwd.structural.mediator.Participant;
 import com.kwd.structural.proxy.Drivable;
 import com.kwd.structural.proxy.Driver;
 import com.kwd.structural.proxy.VehicleProxy;
@@ -145,5 +147,21 @@ public class Main {
 		System.out.println(ba);
 		bac.execute(Action.DEPOSIT, 50000);
 		bac.execute(Action.WITHDRAW, 15000);
+	}
+	
+	public static void mediatorPattern() {
+		Chatroom chatroom = new Chatroom();
+		Participant john = new Participant("John");
+		Participant mary = new Participant("Mary");
+		Participant simone = new Participant("Simone");
+		
+		chatroom.join(john);
+		chatroom.join(mary);
+		
+		john.say("Hey Mary! How are you doing ?");
+		mary.say("I am fine John thanks");
+		
+		chatroom.join(simone);
+		mary.privateMessage("Simone", "Welcome cutie ;)");
 	}
 }
