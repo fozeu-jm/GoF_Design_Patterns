@@ -14,6 +14,11 @@ import com.kwd.structural.adapter.SquaredPegsAdapter;
 import com.kwd.structural.adapter.UsaPlug;
 import com.kwd.structural.bridge.Tv;
 import com.kwd.structural.bridge.UniversalRemote;
+import com.kwd.structural.chainsofresponsibility.ItProjectChainFactory;
+import com.kwd.structural.chainsofresponsibility.MOE;
+import com.kwd.structural.command.BankAccount;
+import com.kwd.structural.command.BankAccountCommand;
+import com.kwd.structural.command.BankAccountCommand.Action;
 import com.kwd.structural.composite.Employee;
 import com.kwd.structural.proxy.Drivable;
 import com.kwd.structural.proxy.Driver;
@@ -22,7 +27,7 @@ import com.kwd.structural.proxy.VehicleProxy;
 public class Main {
 
 	public static void main(String[] args) {
-
+		
 	}
 
 	public static void builderPattern() {
@@ -129,5 +134,16 @@ public class Main {
 		Drivable car = new VehicleProxy(new Driver(12));
 		car.drive();
 	}
-
+	
+	public static void chainOfResponsibility() {
+		MOE begin = ItProjectChainFactory.getChain();
+		begin.handle("Vinted");
+	}
+	public static void CommandPattern() {
+		BankAccount ba = new BankAccount();
+		BankAccountCommand bac = new BankAccountCommand(ba);
+		System.out.println(ba);
+		bac.execute(Action.DEPOSIT, 50000);
+		bac.execute(Action.WITHDRAW, 15000);
+	}
 }
