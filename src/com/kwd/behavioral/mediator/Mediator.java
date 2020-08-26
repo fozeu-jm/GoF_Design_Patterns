@@ -1,4 +1,4 @@
-package com.kwd.structural.mediator;
+package com.kwd.behavioral.mediator;
 
 public interface Mediator {
 	public void broadcast(String source, String message);

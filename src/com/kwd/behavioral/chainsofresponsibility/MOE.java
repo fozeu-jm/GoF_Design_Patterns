@@ -1,4 +1,4 @@
-package com.kwd.structural.chainsofresponsibility;
+package com.kwd.behavioral.chainsofresponsibility;
 
 public abstract class MOE {
 	MOE next;

@@ -1,4 +1,4 @@
-package com.kwd.structural.iterator;
+package com.kwd.behavioral.iterator;
 
 /**
  * For more information

@@ -1,4 +1,4 @@
-package com.kwd.structural.iterator;
+package com.kwd.behavioral.iterator;
 
 public class NameCollection implements Container {
 	public String name[] = { "John", "Mary", "Nathalie", "Erica", "Herman" };

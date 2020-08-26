@@ -1,4 +1,4 @@
-package com.kwd.structural.mediator;
+package com.kwd.behavioral.mediator;
 
 import java.util.ArrayList;
 import java.util.List;

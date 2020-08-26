@@ -1,4 +1,4 @@
-package com.kwd.structural.command;
+package com.kwd.behavioral.command;
 
 public class BankAccountCommand implements Command {
 	private BankAccount acc;
@@ -17,7 +17,6 @@ public class BankAccountCommand implements Command {
 		case DEPOSIT:
 			acc.Deposit(amount);
 			break;
-
 		case WITHDRAW:
 			acc.withdraw(amount);
 			break;

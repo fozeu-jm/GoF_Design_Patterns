@@ -1,4 +1,4 @@
-package com.kwd.structural.command;
+package com.kwd.behavioral.command;
 
 public class BankAccount {
 	private int balance;

@@ -1,4 +1,4 @@
-package com.kwd.structural.mediator;
+package com.kwd.behavioral.mediator;
 
 public interface Animator {
 	public void receive(String source, String message);

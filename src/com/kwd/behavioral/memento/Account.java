@@ -1,4 +1,4 @@
-package com.kwd.structural.memento;
+package com.kwd.behavioral.memento;
 
 public class Account {
     int balance;

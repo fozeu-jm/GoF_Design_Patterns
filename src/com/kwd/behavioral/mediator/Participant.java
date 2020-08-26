@@ -1,4 +1,4 @@
-package com.kwd.structural.mediator;
+package com.kwd.behavioral.mediator;
 
 public class Participant implements Animator {
 	Mediator room;
