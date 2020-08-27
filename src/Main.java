@@ -34,14 +34,7 @@ import com.kwd.structural.proxy.VehicleProxy;
 public class Main {
 
     public static void main(String[] args) {
-        Human human = new Human();
-        Event<PropertyChangedEventArg>.Subscription subscription = human.propertyChanged.addHandler(p -> {
-            System.out.println("Person's " + p.propertyName + " has changed");
-        });
 
-        human.setAge(15);
-        human.setAge(50);
-        subscription.close();
     }
 
     public static void builderPattern() {
@@ -178,7 +171,7 @@ public class Main {
         mary.privateMessage("Simone", "Welcome cutie ;)");
     }
 
-    public static  void mementoPattern(){
+    public static void mementoPattern() {
         Account account = new Account();
         Memento m1 = account.deposit(1500);
         Memento m2 = account.deposit(6000);
@@ -187,5 +180,16 @@ public class Main {
 
         account.restore(m1);
         System.out.println(account);
+    }
+
+    public static void observerPattern() {
+        Human human = new Human();
+        Event<PropertyChangedEventArg>.Subscription subscription = human.propertyChanged.addHandler(p -> {
+            System.out.println("Person's " + p.propertyName + " has changed");
+        });
+
+        human.setAge(15);
+        human.setAge(50);
+        subscription.close();
     }
 }
