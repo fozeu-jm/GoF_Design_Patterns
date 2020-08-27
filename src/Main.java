@@ -4,6 +4,9 @@ import com.kwd.behavioral.observer.PropertyChangedEventArg;
 import com.kwd.behavioral.strategy.AddOperation;
 import com.kwd.behavioral.strategy.Mathematician;
 import com.kwd.behavioral.strategy.MultiplyOperation;
+import com.kwd.behavioral.template.CricketGame;
+import com.kwd.behavioral.template.FootballGame;
+import com.kwd.behavioral.template.Game;
 import org.apache.commons.lang3.SerializationUtils;
 
 import com.kwd.behavioral.chainsofresponsibility.ItProjectChainFactory;
@@ -200,5 +203,13 @@ public class Main {
         System.out.println(mathematician.calculate(4,5));
         mathematician.setOperation(new MultiplyOperation());
         System.out.println(mathematician.calculate(4,5));
+    }
+
+    public static void templatePattern(){
+        Game game = new CricketGame();
+        game.play();
+        System.out.println();
+        game = new FootballGame();
+        game.play();
     }
 }
