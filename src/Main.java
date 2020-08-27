@@ -1,6 +1,9 @@
 import com.kwd.behavioral.observer.Event;
 import com.kwd.behavioral.observer.Human;
 import com.kwd.behavioral.observer.PropertyChangedEventArg;
+import com.kwd.behavioral.strategy.AddOperation;
+import com.kwd.behavioral.strategy.Mathematician;
+import com.kwd.behavioral.strategy.MultiplyOperation;
 import org.apache.commons.lang3.SerializationUtils;
 
 import com.kwd.behavioral.chainsofresponsibility.ItProjectChainFactory;
@@ -187,9 +190,15 @@ public class Main {
         Event<PropertyChangedEventArg>.Subscription subscription = human.propertyChanged.addHandler(p -> {
             System.out.println("Person's " + p.propertyName + " has changed");
         });
-
         human.setAge(15);
         human.setAge(50);
         subscription.close();
+    }
+
+    public static void strategyPattern(){
+        Mathematician mathematician = new Mathematician(new AddOperation());
+        System.out.println(mathematician.calculate(4,5));
+        mathematician.setOperation(new MultiplyOperation());
+        System.out.println(mathematician.calculate(4,5));
     }
 }
